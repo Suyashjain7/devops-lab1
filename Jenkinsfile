@@ -6,7 +6,6 @@ pipeline {
     }
 
     stages {
-
         stage('Checkout') {
             steps {
                 checkout scm
@@ -25,7 +24,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh "grep -qi "Welcome to my DevOps Project" build/index.html"
+                sh 'grep -qi "Welcome to My DevOps Project" build/index.html'
                 echo 'Application test passed.'
             }
         }
