@@ -25,7 +25,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh "grep -q "Welcome to My DevOps Project - Version 2" build/index.html"
+                sh "grep -qi "Welcome to my DevOps Project" build/index.html"
                 echo 'Application test passed.'
             }
         }
